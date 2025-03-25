@@ -22,3 +22,11 @@ dps de entrar na pasta da disciplina, cd venv para entrar no venv, cd Scripts pa
 deactivate sai o (venv)
 
 dps do activate escrever jupyter notebook e o jupyter abre
+
+
+Pré-requisitos aula de python:
+- estar com o computador ligado e na tomada
+- deixar o cmd aberto
+- ir para a pasta do meu repositório
+- ativar a venv
+- digitar spyder
