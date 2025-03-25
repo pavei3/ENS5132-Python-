@@ -9,3 +9,16 @@ Faremos as seguintes atividades:
 - Análise de séries temporais
 - Análise de dados no espaço
 - Análise de dados no espaço e tempo
+
+
+
+
+--------------------------------------------
+cd .. -> volta pra pasta anterior
+cd nome da pasta -> vai para a pasta que eu quero
+tab -> ao apertar vai passando pelas pastas do diretório
+
+dps de entrar na pasta da disciplina, cd venv para entrar no venv, cd Scripts para entrar no Scripts, activate para entrar no (venv)
+deactivate sai o (venv)
+
+dps do activate escrever jupyter notebook e o jupyter abre
