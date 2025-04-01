@@ -94,4 +94,13 @@ dataSample=np.loadtxt(r"C:\Users\bruno\OneDrive\Documentos\Documents\UFSC arquiv
 dataSample2=np.loadtxt(r"C:\Users\bruno\OneDrive\Documentos\Documents\UFSC arquivos\Semestre 10\ENS5132-Python-\data\exemplo.csv",delimiter=',')
 
 #%%
+#criando uma matriz de números aleatórios 100x100
+matriz2D100=np.random.rand(100,100)
+print(matriz2D100)
 
+matriz2D100Slice=matriz2D100[0,:]
+print('Primeira linha:')
+print(matriz2D100Slice)
+print('Valor da última linha e coluna:')
+print(matriz2D100[99,99])
+#%%
