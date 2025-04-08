@@ -146,5 +146,16 @@ stationDf['day']=stationDf.index.day
 #extraindo a hora
 horas=stationDf.Hora.str.split(':')
 
+horaDf=[]
 for hora in horas:
     print(hora[0])
+    horaDf.append(hora[0])
+
+stationDf['hour']=horaDf
+
+#corrigindo a coluna datetime
+stationDf['datetime']=pd.to_datetime(stationDf.astype(str).year+
+                                     stationDf.astype(str).month+
+                                     stationDf.astype(str).day+
+                                     stationDf.astype(str).hour,
+                                     format='%Y%m%d%H')
