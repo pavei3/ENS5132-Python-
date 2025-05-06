@@ -29,15 +29,17 @@ x[11]=-99999999
 #Extraindo a média
 meanX=np.mean(x)
 print(f'A média de X é:{meanX}')
+#se quiser diminuir as casas decimais, apenas adicionar :.xf após o nome da variável
+print(f'A média de X é:{meanX:.2f}')
 
-#Operação booleana
+#Operação booleana - matriz de dados true ou false
 vecBool=(x>20) | (x<-10) #símbolo | também significa or
 
 #Extraindo valores errados usando lógica booleana
 valErrado=x[vecBool]
 
 #Substituindo os valores errados por 0
-x2=x.copy() #Criando uma cópia independente, se n usar o .copy o que alterar em
+x2=x.copy() #Criando uma cópia independente, se não usar o .copy o que alterar em
             #um também vai alterar no outro
 x2[vecBool]=0
 print(f'Está é a média de x substituindo valores errados por 0:{np.mean(x2)}')
@@ -118,16 +120,17 @@ allFiles=[]
 for fileInList in datalist:
     print(fileInList)
     dfConc=pd.read_csv(fileInList, encoding='Latin1')
+    print(dfConc.shape)
     allFiles.append(dfConc)
 
 #concatenando meus dataframes
 allFiles=pd.concat(allFiles)
 
 #extraindo nomes das estações sem redundância
-sations=pd.unique(allFiles['Estacao'])
+stations=pd.unique(allFiles['Estacao'])
 
 #usando lógica
-stationDf=allFiles[allFiles['Estacao']==sations[0]]
+stationDf=allFiles[allFiles['Estacao']==stations[0]]
 
 #criando coluna datatime
 datetimeDf=pd.to_datetime(stationDf.Data, format='%Y-%m-%d')
